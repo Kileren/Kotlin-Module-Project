@@ -1,3 +1,5 @@
+import navigation.Coordinator
+
 fun main(args: Array<String>) {
-    println("Hello World!")
+    Coordinator().start()
 }
