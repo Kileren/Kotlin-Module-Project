@@ -37,6 +37,6 @@ class ArchiveSelection(
     }
 
     private fun didTapExit() {
-        print("Завершение программы")
+        println("Завершение программы")
     }
 }

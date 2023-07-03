@@ -52,9 +52,11 @@ class UserInputReader(private val scanner: Scanner) {
         var value = ""
         while (!isValid) {
             value = scanner.nextLine()
-            isValid = expectedInput.regex.matches(value) || value.equals("Выход")
+            isValid = (expectedInput.regex.matches(value) && value != "") || value == "Выход"
 
-            if (!isValid) printIncorrectInputMessage(expectedInput)
+            if (!isValid) {
+                printIncorrectInputMessage(expectedInput)
+            }
         }
         return value
     }
